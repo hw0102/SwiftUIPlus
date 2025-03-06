@@ -1,6 +1,6 @@
 //
 //  Extensions.swift
-//  SwiftUIPLus
+//  SwiftUIPlus
 //
 //  Created by Hello World on 3/6/25.
 //
