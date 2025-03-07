@@ -10,8 +10,8 @@ import Foundation
 enum TestEnum: CaseIterable {
     case hello
     case world
-    case nihao
-    case blahblahblahblahblah
+    case shortString
+    case loooooongString
     
     var description: String {
         switch self {
@@ -19,10 +19,10 @@ enum TestEnum: CaseIterable {
             return "Hello"
         case .world:
             return "World"
-        case .nihao:
-            return "nihao"
-        case .blahblahblahblahblah:
-            return "blahblahblahblahblah"
+        case .shortString:
+            return "shortString"
+        case .loooooongString:
+            return "loooooongString"
         }
     }
 }
