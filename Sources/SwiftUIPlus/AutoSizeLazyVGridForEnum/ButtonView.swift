@@ -30,5 +30,5 @@ struct ButtonView: View {
 }
 
 #Preview {
-    ButtonView("Hello")
+    ButtonView(selection: .hello)
 }
