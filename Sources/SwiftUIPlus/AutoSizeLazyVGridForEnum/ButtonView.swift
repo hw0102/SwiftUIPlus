@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonView: View {
+struct ButtonViewForEnum: View {
     let selection: TestEnum
     
     var body: some View {
@@ -30,5 +30,5 @@ struct ButtonView: View {
 }
 
 #Preview {
-    ButtonView(selection: .hello)
+    ButtonViewForEnum(selection: .hello)
 }
