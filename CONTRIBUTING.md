@@ -107,7 +107,7 @@ This package uses semantic versioning through Git tags:
 
 ## Code of Conduct
 
-Be respectful, direct, and constructive in issues and pull requests.
+Please follow the expectations in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## Questions
 
