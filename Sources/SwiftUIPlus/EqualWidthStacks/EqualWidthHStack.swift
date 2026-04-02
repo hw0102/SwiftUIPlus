@@ -44,7 +44,7 @@ struct EqualWidthHStack: Layout {
 }
 
 #Preview {
-    EqualWidthVStack {
+    EqualWidthHStack {
         ButtonView(text: "Hello, World!")
         ButtonView(text: "a")
         ButtonView(text: "ThisIsALongerText")
