@@ -36,7 +36,7 @@ GitHub issue and pull request templates are included in this repository to keep 
 Requirements:
 
 - Xcode with Swift 6 toolchain support
-- iOS 16+ or macOS 12+ SDKs
+- iOS 16+ or macOS 13+ SDKs
 
 To work on the package locally:
 
