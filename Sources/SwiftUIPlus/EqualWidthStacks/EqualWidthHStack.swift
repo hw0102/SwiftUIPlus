@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// HStack but every view takes on the width of the widest view
 struct EqualWidthHStack: Layout {
     // calculate and report how large my layout container is
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {

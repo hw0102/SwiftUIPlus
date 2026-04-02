@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Auto layout of your enums. Bring your own styling.
 struct AutoSizeLazyVGridForEnum<T: CaseIterable & Hashable, Content: View>: View where T.AllCases.Index == Int {
     
     let rowSize: Int

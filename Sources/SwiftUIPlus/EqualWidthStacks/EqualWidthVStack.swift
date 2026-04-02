@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// VStack but every view takes on the width of the widest view.
 struct EqualWidthVStack: Layout {
     // calculate and report how large my layout container is
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
@@ -48,7 +49,7 @@ struct EqualWidthVStack: Layout {
 }
 
 #Preview {
-    EqualWidthHStack {
+    EqualWidthVStack {
         ButtonView(text: "Hello, World!")
         ButtonView(text: "a")
         ButtonView(text: "ThisIsALongerText")
