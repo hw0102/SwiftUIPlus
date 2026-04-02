@@ -11,7 +11,7 @@ Current package contents:
 ## Requirements
 
 - iOS 16+
-- macOS 12+
+- macOS 13+
 - Swift 6 tools
 
 ## Installation
@@ -69,7 +69,7 @@ This package is versioned with Git tags using semantic versioning:
 The package manifest is currently:
 
 - library product: `SwiftUIPlus`
-- platforms: iOS 16 and macOS 12
+- platforms: iOS 16 and macOS 13
 - tools version: Swift 6.0
 
 ## Contributing
