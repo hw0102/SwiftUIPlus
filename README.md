@@ -22,14 +22,14 @@ In Xcode:
 
 1. Open your project.
 2. Go to `File > Add Package Dependencies...`
-3. Enter your repository URL.
+3. Enter this repository URL: `https://github.com/hw0102/SwiftUIPlus.git`
 4. Choose a version rule and add the `SwiftUIPlus` product.
 
 If you are depending on the package in another Swift package:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-name/SwiftUIPlus.git", from: "0.1.0")
+    .package(url: "https://github.com/hw0102/SwiftUIPlus.git", from: "0.1.0")
 ]
 ```
 
