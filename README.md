@@ -44,109 +44,12 @@ Then add the product to your target:
 )
 ```
 
-## Included Layouts
+## Utility Guides
 
-### EqualWidthHStack
+Each utility folder includes its own usage guide:
 
-Use `EqualWidthHStack` when you want horizontally arranged views to share the same width based on the widest item.
-
-```swift
-import SwiftUI
-import SwiftUIPlus
-
-struct EqualWidthButtonsView: View {
-    var body: some View {
-        EqualWidthHStack {
-            Button("Short") { }
-                .buttonStyle(.borderedProminent)
-
-            Button("A Much Longer Title") { }
-                .buttonStyle(.borderedProminent)
-
-            Button("Mid") { }
-                .buttonStyle(.borderedProminent)
-        }
-    }
-}
-```
-
-This is useful for:
-
-- button groups
-- segmented action rows
-- compact forms where visual alignment matters
-
-### EqualWidthVStack
-
-Use `EqualWidthVStack` when you want vertically stacked views to match the width of the widest item.
-
-```swift
-import SwiftUI
-import SwiftUIPlus
-
-struct EqualWidthColumnView: View {
-    var body: some View {
-        EqualWidthVStack {
-            Text("Small")
-                .padding()
-                .background(.blue.opacity(0.1))
-
-            Text("A Wider Piece of Content")
-                .padding()
-                .background(.blue.opacity(0.1))
-
-            Text("Medium")
-                .padding()
-                .background(.blue.opacity(0.1))
-        }
-    }
-}
-```
-
-This is useful for:
-
-- action sheets built in SwiftUI
-- vertically stacked controls
-- custom sidebars or tool palettes
-
-### AutoSizeLazyVGridForEnum
-
-Use `AutoSizeLazyVGridForEnum` when you already have a `CaseIterable` enum and want to render it as evenly grouped rows without manually chunking the cases yourself.
-
-```swift
-import SwiftUI
-import SwiftUIPlus
-
-enum Filter: String, CaseIterable, Hashable {
-    case all
-    case favorites
-    case unread
-    case archived
-    case flagged
-}
-
-struct FilterGridView: View {
-    var body: some View {
-        AutoSizeLazyVGridForEnum<Filter, Text>(
-            rowSize: 3,
-            rowSpacing: 12,
-            columnSpacing: 12
-        ) { filter in
-            Text(filter.rawValue.capitalized)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(.gray.opacity(0.15))
-                .clipShape(Capsule())
-        }
-    }
-}
-```
-
-This is useful for:
-
-- filter chips
-- enum-based pickers
-- settings choices
+- [EqualWidthStacks](Sources/SwiftUIPlus/EqualWidthStacks/README.md)
+- [AutoSizeLazyVGridForEnum](Sources/SwiftUIPlus/AutoSizeLazyVGridForEnum/README.md)
 
 ## Why This Package Exists
 
@@ -154,18 +57,12 @@ SwiftUI gives you strong primitives, but some layout behaviors still require cus
 
 ## Versioning
 
-This package should be versioned with Git tags using semantic versioning:
+This package is versioned with Git tags using semantic versioning:
 
 - `PATCH` for fixes
 - `MINOR` for new backward-compatible additions
 - `MAJOR` for breaking API changes
 
-Example:
-
-```bash
-git tag 0.1.0
-git push origin 0.1.0
-```
 
 ## Development Notes
 

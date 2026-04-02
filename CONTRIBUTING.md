@@ -59,6 +59,8 @@ Please follow the existing style in the repository:
 - avoid adding dependencies unless there is a strong reason
 - preserve platform support declared in `Package.swift`
 - update documentation when adding or changing public behavior
+- include a utility-level `README.md` that explains how to use a new utility
+- include SwiftUI previews for each utility so behavior is easy to review
 
 When adding new APIs:
 
@@ -79,6 +81,11 @@ If your pull request changes behavior, include:
 
 - a usage example, screenshot, or explanation of before vs. after behavior
 - tests if the repository has tests for that area or if adding tests is practical
+
+If your pull request adds a new utility, it must also include:
+
+- a `README.md` in that utility's folder with usage guidance and an example
+- previews in the utility source files so the API and layout can be inspected quickly
 
 ## Breaking Changes
 
