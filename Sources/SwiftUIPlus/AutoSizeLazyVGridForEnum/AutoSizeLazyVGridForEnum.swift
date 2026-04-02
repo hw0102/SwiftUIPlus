@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Auto layout of your enums. Bring your own styling.
-struct AutoSizeLazyVGridForEnum<T: CaseIterable & Hashable, Content: View>: View where T.AllCases.Index == Int {
+public struct AutoSizeLazyVGridForEnum<T: CaseIterable & Hashable, Content: View>: View where T.AllCases.Index == Int {
     
     let rowSize: Int
     
@@ -20,7 +20,19 @@ struct AutoSizeLazyVGridForEnum<T: CaseIterable & Hashable, Content: View>: View
     
     @ViewBuilder let content: (T) -> Content
     
-    var body: some View {
+    public init(
+        rowSize: Int,
+        rowSpacing: CGFloat = 10,
+        columnSpacing: CGFloat = 10,
+        @ViewBuilder content: @escaping (T) -> Content
+    ) {
+        self.rowSize = rowSize
+        self.rowSpacing = rowSpacing
+        self.columnSpacing = columnSpacing
+        self.content = content
+    }
+
+    public var body: some View {
         VStack(spacing: rowSpacing) {
             ForEach(T.allCases.chunk(rowSize: rowSize), id: \.self) { caseGroup in
                 HStack(spacing: columnSpacing) {

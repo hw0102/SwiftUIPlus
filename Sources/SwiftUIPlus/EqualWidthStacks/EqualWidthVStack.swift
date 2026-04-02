@@ -8,9 +8,11 @@
 import SwiftUI
 
 /// VStack but every view takes on the width of the widest view.
-struct EqualWidthVStack: Layout {
+public struct EqualWidthVStack: Layout {
+    public init() {}
+
     // calculate and report how large my layout container is
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+    public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let maxSize = subviews.maxSize
         let maxSpacing = subviews.maxSpacingY
         let totalSpacing = maxSpacing.reduce(0, +)
@@ -22,7 +24,7 @@ struct EqualWidthVStack: Layout {
     }
     
     // tell layout subviews where to appear
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+    public func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         let maxSize = subviews.maxSize
         // let maxSpacingX = subviews.maxSpacingX
         let maxSpacingY = subviews.maxSpacingY
